@@ -1,8 +1,9 @@
 "use strict"
+
 function renderCoffee(coffee) {
     let html = '<div class="coffee col-6 d-flex align-items-end">';
     html += `<h1 class="coffee-name text-white ">` + coffee.name + `</h1>`;
-    html +=  `<p style="color: black">` + coffee.roast + `</p>`;
+    html += `<p style="color: black">` + coffee.roast + `</p>`;
     html += '</div>';
 
     return html;
@@ -40,25 +41,25 @@ function updateCoffees(e) {
 function updateCoffeesNames(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     let selectedCoffees = [];
-    coffees.forEach(function(coffee) {
-        if ((coffee.name).toLowerCase().includes((coffeeInput.value).toLowerCase()) && coffee.roast === roastSelection.value){
+    coffees.forEach(function (coffee) {
+        if ((coffee.name).toLowerCase().includes((coffeeInput.value).toLowerCase()) && coffee.roast === roastSelection.value) {
             selectedCoffees.push(coffee);
-        }
-        else if((coffee.name).toLowerCase().includes((coffeeInput.value).toLowerCase()) && coffee.roastAll === roastSelection.value){
+        } else if ((coffee.name).toLowerCase().includes((coffeeInput.value).toLowerCase()) && coffee.roastAll === roastSelection.value) {
             selectedCoffees.push(coffee);
         }
     });
     tbody.innerHTML = renderCoffees(selectedCoffees)
 }
 
-function addName(e){
-    let addCoffee={};
-    addCoffee.name=nameInput.value
-    addCoffee.roast=roastSelection2.value
-    addCoffee.roastAll=`all`
+function addName(e) {
+    let addCoffee = {};
+    addCoffee.name = nameInput.value
+    addCoffee.roast = roastSelection2.value
+    addCoffee.roastAll = `all`
     coffees.push(addCoffee)
     tbody.innerHTML = renderCoffees(coffees)
 }
+
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 let coffees = [
     {id: 1, name: 'Light City', roast: 'light', roastAll: 'all'},
@@ -82,7 +83,7 @@ let submitButton = document.querySelector('#submit');
 let roastSelection = document.querySelector('#roast-selection');
 let coffeeInput = document.querySelector('#coffee-name-input');
 let nameInput = document.querySelector('#name-input');
-let roastSelection2= document.querySelector('#roast-selection2');
+let roastSelection2 = document.querySelector('#roast-selection2');
 let submitButton2 = document.querySelector('#submit2');
 
 tbody.innerHTML = renderCoffees(coffees);
@@ -91,6 +92,5 @@ submitButton.addEventListener('click', updateCoffees);
 roastSelection.addEventListener(`change`, updateCoffees);
 coffeeInput.addEventListener(`keyup`, updateCoffeesNames);
 submitButton2.addEventListener(`click`, addName)
-roastSelection.addEventListener(`change`,changeBg)
 
 

@@ -1,4 +1,4 @@
-.page-wrapper{
+.page-wrapper {
     min-height: 100vh;
     background-image: url("img/light-coffee.jpeg");
     background-repeat: no-repeat;
@@ -10,37 +10,41 @@ table, caption, tbody, tfoot, thead, tr, th, td {
     all: unset;
 }
 
-.submit-btn{
+.submit-btn {
     background-color: #3C89CB;
     border: 2px solid dimgrey;
     border-radius: 2%;
 }
 
-.coffee-name{
+.coffee-name {
 
 }
 
-.big-con{
+.big-con {
     border: 5px solid dimgrey;
     opacity: 85%;
     background: #6E8FB2;
 }
-.container-fluid{
-   /*background:  #6E8FB2;*/
+
+.container-fluid {
+    /*background:  #6E8FB2;*/
     /*opacity: 25%;*/
 
 }
-#header-text{
+
+#header-text {
     font-size: 5em;
-/*opacity: 60%;*/
+    /*opacity: 60%;*/
 
 }
-svg{
+
+svg {
     height: 120px;
     width: auto;
     opacity: 80%;
     padding-bottom: 10px;
 }
-#sub-header-text{
-color: white;
+
+#sub-header-text {
+    color: white;
 }
