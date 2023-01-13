@@ -17,7 +17,8 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 }
 
 .coffee-name {
-
+    font-family: 'Rowdies', cursive;
+    font-size: 38px;
 }
 
 .big-con {
@@ -26,16 +27,8 @@ table, caption, tbody, tfoot, thead, tr, th, td {
     background: #6E8FB2;
 }
 
-.container-fluid {
-    /*background:  #6E8FB2;*/
-    /*opacity: 25%;*/
-
-}
-
 #header-text {
     font-size: 5em;
-    /*opacity: 60%;*/
-
 }
 
 svg {
@@ -46,5 +39,10 @@ svg {
 }
 
 #sub-header-text {
+    font-family: 'Lobster', cursive;
     color: white;
+}
+
+.container-table {
+    min-height: 520px;
 }

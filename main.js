@@ -2,8 +2,8 @@
 
 function renderCoffee(coffee) {
     let html = '<div class="coffee col-6 d-flex align-items-end">';
-    html += `<h1 class="coffee-name text-white ">` + coffee.name + `</h1>`;
-    html += `<p style="color: black">` + coffee.roast + `</p>`;
+    html += `<h1 class="coffee-name text-white">` + coffee.name + `</h1>`;
+    html += `<p class="text-warning">` + coffee.roast + `</p>`;
     html += '</div>';
 
     return html;
@@ -42,9 +42,9 @@ function updateCoffeesNames(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     let selectedCoffees = [];
     coffees.forEach(function (coffee) {
-        if ((coffee.name).toLowerCase().includes((coffeeInput.value).toLowerCase()) && coffee.roast === roastSelection.value) {
+        if ((coffee.name).toLowerCase().startsWith((coffeeInput.value).toLowerCase()) && coffee.roast === roastSelection.value) {
             selectedCoffees.push(coffee);
-        } else if ((coffee.name).toLowerCase().includes((coffeeInput.value).toLowerCase()) && coffee.roastAll === roastSelection.value) {
+        } else if ((coffee.name).toLowerCase().startsWith((coffeeInput.value).toLowerCase()) && coffee.roastAll === roastSelection.value) {
             selectedCoffees.push(coffee);
         }
     });
