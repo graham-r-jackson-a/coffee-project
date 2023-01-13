@@ -91,6 +91,7 @@ tbody.innerHTML = renderCoffees(coffees);
 submitButton.addEventListener('click', updateCoffees);
 roastSelection.addEventListener(`change`, updateCoffees);
 coffeeInput.addEventListener(`keyup`, updateCoffeesNames);
-submitButton2.addEventListener(`click`, addName)
+submitButton2.addEventListener(`click`, addName);
+
 
 
