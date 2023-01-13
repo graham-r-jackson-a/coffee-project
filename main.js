@@ -51,7 +51,7 @@ function updateCoffeesNames(e) {
     tbody.innerHTML = renderCoffees(selectedCoffees)
 }
 
-function addName(e) {
+function addName() {
     let addCoffee = {};
     addCoffee.name = nameInput.value
     addCoffee.roast = roastSelection2.value
